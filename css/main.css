@@ -2,3 +2,11 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	background-color: lime;
 }
+
+input {
+	
+}
+
+.button {
+	display: none;
+}
