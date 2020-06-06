@@ -14,7 +14,7 @@ src: local('Amurg Regular'), url('font/Amurg-Regular.woff') format('woff');
 body {
 	margin: 0;
 	padding: 0;
-	font-family: Amurg Regular;
+	font-family: Amurg Regular, Helvetica, sans-serif;
 	background-color: #c3bfbf;
 }
 
