@@ -14,7 +14,7 @@ src: local('Amurg Regular'), url('font/Amurg-Regular.woff') format('woff');
 body {
 	margin: 0;
 	padding: 0;
-	font-family: Amurg Regular, Helvetica, sans-serif;
+	font-family: Amurg Regular, helvetica, sans-serif;
 	background-color: #c3bfbf;
 }
 
@@ -149,7 +149,7 @@ p{
 	color: black;
 	font-size: 1.3em;
 	margin-bottom: 0.5em;
-	width: 25em;
+	max-width: 25em;
 	line-height: 1.1em;
 }
 
@@ -205,8 +205,8 @@ h2:hover {
 
 .containerauthor {
 	padding-top: 10em;
-	padding-left: 10em;
-	padding-right: 10em;
+	padding-left: 10vw;
+	padding-right: 10vw;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: top;
@@ -265,6 +265,11 @@ span {
 	padding-top: 1em;
 	justify-content: center;
 	text-align: center;
+}
+
+.image {
+	width: 40vw;
+	padding: 1em;
 }
 
 
