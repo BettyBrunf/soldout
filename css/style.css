@@ -248,7 +248,10 @@ span {
 
 .soldout {
 	height: 100vh;
-	padding-top: 30vh;
+	padding-top: 35vh;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
 }
 
 .unavailable {
