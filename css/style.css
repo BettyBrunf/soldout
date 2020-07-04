@@ -18,13 +18,6 @@ body {
 	background-color: #c3bfbf;
 }
 
-#myVideo {
-  	position: relative;
-  	right: 0;
-  	bottom: 0;
-	width: 100%;
-	z-index: 20;
-}
 
 
 header {
@@ -35,7 +28,40 @@ header {
 	display: flex;
 	justify-content: space-between;
 	flex-flow: row;
-	z-index: 10;
+	z-index: 2;
+}
+
+
+.banner {
+	background-color: #00ff00;
+	position: fixed;
+    width: 100vw;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    bottom: 0;
+    z-index: 10;
+}
+
+.bottom p {
+	color: white;
+	width: 100vw;
+	-moz-animation: scroll-left 30s linear infinite;
+    -webkit-animation: scroll-left 30s linear infinite;
+	animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+	0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+	}
+
+	100% {
+	    -moz-transform: translateX(-100%);
+	    -webkit-transform: translateX(-100%);
+	    transform: translateX(-100%);
+	}
 }
 
 .logoline, .contactbox {
@@ -43,18 +69,14 @@ header {
 	display: inline-block;
 }
 
-/*.logoline {
-	margin-top: -1em;
+.phoneintro {
+	display: none;
 }
 
-.rotate {
-	-webkit-transform:rotate(-15deg);
-	-moz-transform: rotate(-15deg);
-  	-ms-transform: rotate(-15deg);
-  	-o-transform: rotate(-15deg);
-  	transform: rotate(-15deg);
-  	z-index: 11;
-}*/
+.intro {
+	max-width: 60vw;
+}
+
 
 .aboutcontact {
 	display: flex;
@@ -63,6 +85,7 @@ header {
 }
 
 .about, .insta, .mail {
+	margin-top: -0.5em;
 	padding-left: 1em;
 	align-self: center;
 }
@@ -73,17 +96,6 @@ a {
 
 .aboutstyle:hover {
 	text-decoration: underline;
-}
-
-
-.aboutsection{
-	background-color: white;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: 100;
 }
 
 h1 {
@@ -139,28 +151,13 @@ h1 {
 	transform: rotate(-15deg);
 }
 
-footer {
-	padding: 1.7em;
-	display: flex;
-	align-items: flex-end;
-}
 
-p{
+p {
 	color: black;
 	font-size: 1.3em;
-	margin-bottom: 0.5em;
-	max-width: 25em;
 	line-height: 1.1em;
 }
 
-input {
-	background-color: #c3bfbf;
-	border: none;
-	border-bottom: solid 2px white;
-	border-radius: 0;
-	padding: 0.2em;
-	padding-right: 1em;
-}
 
 .containerabout {
 	display: flex;
@@ -169,8 +166,11 @@ input {
 .textabout {
 	margin-left: 15vw;
 	max-width: 49vw;
-	margin-bottom: 20em;
-	padding-bottom: 20em;
+	margin-bottom: 15em;
+}
+
+.title {
+	display: none;
 }
 
 .titles {
@@ -219,6 +219,7 @@ h2:hover {
 
 span {
 	color: white;
+	text-decoration: underline;
 }
 
 .weblink {
@@ -276,8 +277,111 @@ span {
 
 .imagelongo {
 	width: 60vw;
-	margin-bottom: 8em;
+	margin-bottom: 8em;	
 }
+
+footer {
+	padding: 1.7em;
+	margin-bottom: 2em;
+}
+
+.signup {
+	display: flex;
+	margin-top: 0.4em;
+}
+
+.email {
+	background-color: #c3bfbf;
+	border: solid 1px white;
+	padding: 0.2em;
+	padding-right: 3em;
+}
+
+.button {
+	background-color: white;
+	color: #c3bfbf;
+	padding: 0.2em;
+	border: solid 1px white;
+	font-size: 1.2em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .bottom p {
+	width: 150vw;
+	-moz-animation: scroll-left 25s linear infinite;
+    -webkit-animation: scroll-left 25s linear infinite;
+	animation: scroll-left 25s linear infinite;
+}
+}
+
+@media only screen and (max-width: 600px) {
+ .bottom p {
+	width: 100vw;
+	-moz-animation: none;
+    -webkit-animation: none;
+	animation: none;
+	padding-left: 1em;
+}
+
+  .phoneintro {
+  	display: inline;
+	max-width: 80vw;
+}
+
+.intro {
+	display: none;
+}
+
+  .aboutcontact {
+  	flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.about, .insta, .mail {
+	align-self: flex-end;
+	padding-bottom: 1em;
+	margin-top: 0em;
+}
+
+.authors {
+	margin-top: 16em;
+}
+
+.textabout {
+	margin-left: 1.7em;
+	max-width: 80vw;
+	margin-bottom: 10em;
+}
+
+.title {
+	display: inline;
+}
+
+.titles {
+	display: none;
+}
+
+.containerauthor {
+	flex-flow: column nowrap;
+	align-items: top;
+}
+
+.itemauthor {
+	max-width: 100%;
+}
+
+.image {
+	width: 80vw;
+}
+
+footer {
+	margin-bottom: 5em;
+}
+
+
+}
+
+
 
 
 
